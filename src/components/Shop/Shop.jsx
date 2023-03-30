@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import Cart from "./Cart/Cart";
 import Product from "./Product/Product";
 import "./Shop.css";
 
@@ -27,13 +28,8 @@ const Shop = () => {
           ></Product>
         ))}
       </div>
-      <div className="bg-accent">
-        <div className="text-xl text-black text-center my-5">
-          <h1>Order Summary</h1>
-        </div>
-        <div className="mx-4 text-lg">
-          <p>Selected Items: {cart.length}</p>
-        </div>
+      <div className="bg-accent ">
+        <Cart cart={cart}></Cart>
       </div>
     </div>
   );
